@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:8080/#8 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="http://localhost:8080/favicon.ico">
+    <title>test_all</title>
+  <link href="./KGGSEE_files/app.js.下载" rel="preload" as="script"><link href="./KGGSEE_files/chunk-vendors.js.下载" rel="preload" as="script"><style type="text/css">.nav-list[data-v-342754b2] {
+  margin-left: 15px;
+  padding-left: 0;
+  font-size: 14px;
+}
+.nav-list a[data-v-342754b2] {
+  display: block;
+  color: #333;
+}
+.nav-list a[data-v-342754b2]:link,
+.nav-list a[data-v-342754b2]:visited {
+  text-decoration: none;
+}
+.nav-list a[data-v-342754b2]:hover {
+  text-decoration: underline;
+}
+.nav-list a.active[data-v-342754b2] {
+  color: #409EFF;
+  font-weight: 600;
+}
+.nav-list a[data-v-342754b2] {
+  line-height: 1.2em !important;
+  margin: 9px 0;
+}
+ul[data-v-342754b2] {
+  list-style-type: disc;
+}
+ul ul[data-v-342754b2] {
+  list-style-type: circle;
+}
+.title[data-v-342754b2] {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+</style><style type="text/css">.main[data-v-09688901] {
+  width: 100%;
+  background: #FCFCFC;
+}
+.content[data-v-09688901] {
+  margin-right: 200px;
+}
+.main-content[data-v-09688901] {
+  height: 100%;
+  margin-right: 220px;
+  color: #5c5c5c;
+  word-wrap: break-word;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  padding: 20px 30px;
+}
+.menu[data-v-09688901] {
+  height: 100%;
+  width: 200px;
+  z-index: 2;
+  position: fixed;
+  right: 10px;
+  top: 85px;
+}
+</style><style type="text/css">html {
+    line-height: 1.15;
+    height: 100%;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* scroll-behavior: smooth;  */
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+/* css的方式时，为锚点定位增加一个偏移量 */
+div .offset {
+    position: relative;
+    padding-top: 40px;
+    margin-top: -40px;
+    visibility: hidden;
+}
+/* rewrite element ui */
+</style><style type="text/css">@font-face {
+    font-family: octicons-link;
+    src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+  }
+  
+  .markdown-body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    color: #24292e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  
+  .markdown-body .pl-c {
+    color: #6a737d;
+  }
+  
+  .markdown-body .pl-c1,
+  .markdown-body .pl-s .pl-v {
+    color: #005cc5;
+  }
+  
+  .markdown-body .pl-e,
+  .markdown-body .pl-en {
+    color: #6f42c1;
+  }
+  
+  .markdown-body .pl-smi,
+  .markdown-body .pl-s .pl-s1 {
+    color: #24292e;
+  }
+  
+  .markdown-body .pl-ent {
+    color: #22863a;
+  }
+  
+  .markdown-body .pl-k {
+    color: #d73a49;
+  }
+  
+  .markdown-body .pl-s,
+  .markdown-body .pl-pds,
+  .markdown-body .pl-s .pl-pse .pl-s1,
+  .markdown-body .pl-sr,
+  .markdown-body .pl-sr .pl-cce,
+  .markdown-body .pl-sr .pl-sre,
+  .markdown-body .pl-sr .pl-sra {
+    color: #032f62;
+  }
+  
+  .markdown-body .pl-v,
+  .markdown-body .pl-smw {
+    color: #e36209;
+  }
+  
+  .markdown-body .pl-bu {
+    color: #b31d28;
+  }
+  
+  .markdown-body .pl-ii {
+    color: #fafbfc;
+    background-color: #b31d28;
+  }
+  
+  .markdown-body .pl-c2 {
+    color: #fafbfc;
+    background-color: #d73a49;
+  }
+  
+  .markdown-body .pl-c2::before {
+    content: "^M";
+  }
+  
+  .markdown-body .pl-sr .pl-cce {
+    font-weight: bold;
+    color: #22863a;
+  }
+  
+  .markdown-body .pl-ml {
+    color: #735c0f;
+  }
+  
+  .markdown-body .pl-mh,
+  .markdown-body .pl-mh .pl-en,
+  .markdown-body .pl-ms {
+    font-weight: bold;
+    color: #005cc5;
+  }
+  
+  .markdown-body .pl-mi {
+    font-style: italic;
+    color: #24292e;
+  }
+  
+  .markdown-body .pl-mb {
+    font-weight: bold;
+    color: #24292e;
+  }
+  
+  .markdown-body .pl-md {
+    color: #b31d28;
+    background-color: #ffeef0;
+  }
+  
+  .markdown-body .pl-mi1 {
+    color: #22863a;
+    background-color: #f0fff4;
+  }
+  
+  .markdown-body .pl-mc {
+    color: #e36209;
+    background-color: #ffebda;
+  }
+  
+  .markdown-body .pl-mi2 {
+    color: #f6f8fa;
+    background-color: #005cc5;
+  }
+  
+  .markdown-body .pl-mdr {
+    font-weight: bold;
+    color: #6f42c1;
+  }
+  
+  .markdown-body .pl-ba {
+    color: #586069;
+  }
+  
+  .markdown-body .pl-sg {
+    color: #959da5;
+  }
+  
+  .markdown-body .pl-corl {
+    text-decoration: underline;
+    color: #032f62;
+  }
+  
+  .markdown-body .octicon {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentColor;
+  }
+  
+  .markdown-body a {
+    background-color: transparent;
+  }
+  
+  .markdown-body a:active,
+  .markdown-body a:hover {
+    outline-width: 0;
+  }
+  
+  .markdown-body strong {
+    font-weight: inherit;
+  }
+  
+  .markdown-body strong {
+    font-weight: bolder;
+  }
+  
+  .markdown-body h1 {
+    font-size: 20px;
+    margin: 0.67em 0;
+    /* color: #409EFF; */
+  }
+  
+  .markdown-body img {
+    border-style: none;
+  }
+  
+  .markdown-body code,
+  .markdown-body kbd,
+  .markdown-body pre {
+    font-family: monospace, monospace;
+    font-size: 13px;
+    color: #5c5c5c;
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+  }
+  
+  .markdown-body hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+  
+  .markdown-body input {
+    font: inherit;
+    margin: 0;
+  }
+  
+  .markdown-body input {
+    overflow: visible;
+  }
+  
+  .markdown-body [type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  .markdown-body * {
+    box-sizing: border-box;
+  }
+  
+  .markdown-body input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  .markdown-body a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .markdown-body a:hover {
+    text-decoration: underline;
+  }
+  
+  .markdown-body strong {
+    font-weight: 600;
+  }
+  
+  .markdown-body hr {
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #dfe2e5;
+  }
+  
+  .markdown-body hr::before {
+    display: table;
+    content: "";
+  }
+  
+  .markdown-body hr::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  
+  .markdown-body table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  
+  .markdown-body td,
+  .markdown-body th {
+    padding: 0;
+  }
+  
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .markdown-body h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .markdown-body h2 {
+    font-size: 18px;
+    font-weight: 600;
+    /* color: #409EFF; */
+  }
+  
+  .markdown-body h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .markdown-body h4 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .markdown-body h5 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .markdown-body h6 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .markdown-body p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .markdown-body blockquote {
+    margin: 0;
+  }
+  
+  .markdown-body ul,
+  .markdown-body ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .markdown-body ul {
+    list-style-type: disc;
+  }
+  .markdown-body ol ol,
+  .markdown-body ul ol {
+    list-style-type: lower-roman;
+  }
+  
+  .markdown-body ul ul ol,
+  .markdown-body ul ol ol,
+  .markdown-body ol ul ol,
+  .markdown-body ol ol ol {
+    list-style-type: lower-alpha;
+  }
+  
+  .markdown-body dd {
+    margin-left: 0;
+  }
+  
+  .markdown-body code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
+  }
+  
+  .markdown-body pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 13px;
+  }
+  
+  .markdown-body .octicon {
+    vertical-align: text-bottom;
+  }
+  
+  .markdown-body .pl-0 {
+    padding-left: 0 !important;
+  }
+  
+  .markdown-body .pl-1 {
+    padding-left: 4px !important;
+  }
+  
+  .markdown-body .pl-2 {
+    padding-left: 8px !important;
+  }
+  
+  .markdown-body .pl-3 {
+    padding-left: 16px !important;
+  }
+  
+  .markdown-body .pl-4 {
+    padding-left: 24px !important;
+  }
+  
+  .markdown-body .pl-5 {
+    padding-left: 32px !important;
+  }
+  
+  .markdown-body .pl-6 {
+    padding-left: 40px !important;
+  }
+  
+  .markdown-body::before {
+    display: table;
+    content: "";
+  }
+  
+  .markdown-body::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  
+  /* .markdown-body>*:first-child {
+    margin-top: 0 !important;
+  } */
+  
+  .markdown-body>*:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown-body a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+  }
+  /* 设置锚点距离顶部向下偏移 */
+  .markdown-body .anchor{
+    display: block;
+    height: 40px!important; /*same height as header*/
+    margin-top: -40px!important; /*same height as header*/
+    visibility: hidden;
+  }
+  
+  .markdown-body .anchor:focus {
+    outline: none;
+  }
+  
+  .markdown-body p,
+  .markdown-body blockquote,
+  .markdown-body ul,
+  .markdown-body ol,
+  .markdown-body dl,
+  .markdown-body table,
+  .markdown-body pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  
+  .markdown-body hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #e1e4e8;
+    border: 0;
+  }
+  
+  .markdown-body blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+  }
+  
+  .markdown-body blockquote>:first-child {
+    margin-top: 0;
+  }
+  
+  .markdown-body blockquote>:last-child {
+    margin-bottom: 0;
+  }
+  
+  .markdown-body kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: 11px;
+    line-height: 10px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+  }
+  
+  .markdown-body h1,
+  .markdown-body h2,
+  .markdown-body h3,
+  .markdown-body h4,
+  .markdown-body h5,
+  .markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .markdown-body h1 .octicon-link,
+  .markdown-body h2 .octicon-link,
+  .markdown-body h3 .octicon-link,
+  .markdown-body h4 .octicon-link,
+  .markdown-body h5 .octicon-link,
+  .markdown-body h6 .octicon-link {
+    color: #1b1f23;
+    vertical-align: middle;
+    visibility: hidden;
+  }
+  
+  .markdown-body h1:hover .anchor,
+  .markdown-body h2:hover .anchor,
+  .markdown-body h3:hover .anchor,
+  .markdown-body h4:hover .anchor,
+  .markdown-body h5:hover .anchor,
+  .markdown-body h6:hover .anchor {
+    text-decoration: none;
+  }
+  
+  .markdown-body h1:hover .anchor .octicon-link,
+  .markdown-body h2:hover .anchor .octicon-link,
+  .markdown-body h3:hover .anchor .octicon-link,
+  .markdown-body h4:hover .anchor .octicon-link,
+  .markdown-body h5:hover .anchor .octicon-link,
+  .markdown-body h6:hover .anchor .octicon-link {
+    visibility: visible;
+  }
+  
+  .markdown-body h1 {
+    padding-bottom: 0.3em;
+    font-size: 20px;
+    border-bottom: 1px solid #eaecef;
+  }
+  
+  .markdown-body h2 {
+    padding-bottom: 0.3em;
+    font-size: 18px;
+    border-bottom: 1px solid #eaecef;
+  }
+  
+  .markdown-body h3 {
+    font-size: 16px;
+  }
+  
+  .markdown-body h4 {
+    font-size: 14px;
+  }
+  
+  .markdown-body h5 {
+    font-size: 14px;
+  }
+  
+  .markdown-body h6 {
+    font-size: 12px;
+    color: #6a737d;
+  }
+  
+  .markdown-body ul,
+  .markdown-body ol {
+    padding-left: 2em;
+  }
+  
+  .markdown-body ul ul,
+  .markdown-body ul ol,
+  .markdown-body ol ol,
+  .markdown-body ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .markdown-body li {
+    word-wrap: break-all;
+  }
+  
+  .markdown-body li>p {
+    margin-top: 16px;
+  }
+  
+  .markdown-body li+li {
+    margin-top: 0.25em;
+  }
+  
+  .markdown-body dl {
+    padding: 0;
+  }
+  
+  .markdown-body dl dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+  }
+  
+  .markdown-body dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+  
+  .markdown-body table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+  }
+  
+  .markdown-body table th {
+    font-weight: 600;
+  }
+  
+  .markdown-body table th,
+  .markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+  
+  .markdown-body table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+  }
+  
+  .markdown-body table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+  
+  .markdown-body img {
+    max-width: 100%;
+    box-sizing: content-box;
+    background-color: #fff;
+  }
+  
+  .markdown-body img[align=right] {
+    padding-left: 20px;
+  }
+  
+  .markdown-body img[align=left] {
+    padding-right: 20px;
+  }
+  
+  .markdown-body code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+  }
+  
+  .markdown-body pre {
+    word-wrap: normal;
+  }
+  
+  .markdown-body pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+  
+  .markdown-body .highlight {
+    margin-bottom: 16px;
+  }
+  
+  .markdown-body .highlight pre {
+    margin-bottom: 0;
+    word-break: normal;
+  }
+  
+  .markdown-body tr td {
+      font-size: 12px;
+  }
+  
+  .markdown-body .highlight pre,
+  .markdown-body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    border-radius: 3px;
+  }
+  
+  .markdown-body pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .markdown-body .full-commit .btn-outline:not(:disabled):hover {
+    color: #005cc5;
+    border-color: #005cc5;
+  }
+  
+  .markdown-body kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #d1d5da;
+    border-bottom-color: #c6cbd1;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #c6cbd1;
+  }
+  
+  .markdown-body :checked+.radio-label {
+    position: relative;
+    z-index: 1;
+    border-color: #0366d6;
+  }
+  
+  .markdown-body .task-list-item {
+    list-style-type: none;
+  }
+  
+  .markdown-body .task-list-item+.task-list-item {
+    margin-top: 3px;
+  }
+  
+  .markdown-body .task-list-item input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+  }
+  
+  .markdown-body hr {
+    border-bottom-color: #eee;
+  }
+  </style><script charset="utf-8" src="./KGGSEE_files/app.ccc5bc309336a346f3e4.hot-update.js.下载"></script><script charset="utf-8" src="./KGGSEE_files/app.82edbe09b12cc1fbc74d.hot-update.js.下载"></script><script charset="utf-8" src="./KGGSEE_files/app.8a182a63e8179d6252ee.hot-update.js.下载"></script><script charset="utf-8" src="./KGGSEE_files/app.aa0006f3d05e55cd0549.hot-update.js.下载"></script><script charset="utf-8" src="./KGGSEE_files/app.0bb5a7e0c7c3de5e3e37.hot-update.js.下载"></script></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but test_all doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"><div><div data-v-09688901="" class="main"><div data-v-09688901="" class="main-content"><div data-v-09688901="" id="content" class="markdown-body"><h1 align="center">KGGSEE: A biological Knowledge-based mining platform for Genomic and Genetic association Summary statistics using gEne Expression</h1>
+<p align="center">User manual 1.0</p>
+<p align="center">Miaoxin Li, Lin Jiang</p>
+
+<h1 id="0" class="jump">Introduction</h1><p>KGGSEE is a standalone Java tool for knowledge-based analyses of genomic and genetic association summary statistics of complex phenotypes by integrating gene expression and related data. It has four major integrative analyses, 1) unconditional gene-based association guided by expression quantitative trait loci (eQTLs), 2) conditional gene-based association guided by selective expression in tissues or cell types, 3) estimation of phenotype-associated tissues or cell-type based on gene expression in single-cell or bulk cells of different tissues, and 4) causal gene inference for complex diseases and/or traits based-on multiple eQTL. More integrative analysis functions will be added into this analysis platform in the future.</p>
+<h1 id="1" class="jump">Installation</h1><h2 id="2" class="jump">kggsee.jar</h2><p>The main library of KGGSEE, kggsee.jar, does not need an installation procedure as long as its <a href="https://www.oracle.com/java/technologies/javase-jre8-downloads.html">Java Runtime Environment (JRE) v1.8</a> (or up) is pre-installed in your machine. The kggsee.jar can be directly executed given a file path.</p>
+<h2 id="3" class="jump">R packages</h2><p>However, you many need to install several R packages which will be called by kggsee.jar. The following are instructions for R package installation under the interactive working interface of R.</p>
+<ul>
+<li><p>Rserve
+  <code>install.packages(“Rserve”, dep=TRUE)</code>
+  More installation instruction can be found at <a href="https://www.dundas.com/support/support-center/support-articles/installation/install-and-configure-r">https://www.dundas.com/support/support-center/support-articles/installation/install-and-configure-r</a>.</p>
+</li>
+<li><p>NNLM
+  <code>install.packages(“NNLM”, dep=TRUE)</code>
+  More installation instruction can be found at <a href="https://github.com/linxihui/NNLM">https://github.com/linxihui/NNLM</a>.</p>
+</li>
+<li><p>MASS
+  <code>install.packages(“MASS”, dep=TRUE)</code></p>
+</li>
+<li><p>MendelianRandomization
+  The first step is to install the PhenoScanner package (and the MendelianRandomization package if you haven't done this previously):</p>
+<pre><code>install.packages("devtools")
+library(devtools)
+install_github("phenoscanner/phenoscanner")
+library(phenoscanner)
+
+install.packages("MendelianRandomization")
+library(MendelianRandomization)</code></pre>
+</li>
+</ul>
+<h2 id="4" class="jump">Resource data</h2><p>Under the folder of kggsee, there is a folder named <code>resources</code>, which contains running resource data, e.g., gene boundary and gene expression. KGGSEE will automatically download required resource files. Users can all manually download the files and put them into the corresponding folders.</p>
+<h1 id="5" class="jump">Functions and examples</h1><h2 id="6" class="jump">Gene-based association analysis by an effective chi-square statistics (ECS)</h2><p>One can perform gene-based association analysis by an effective chi-square statistics (ECS) with GWAS <em>p</em>-values of variants. The <em>p</em>-values are converted to chi-square statistics (degree of freedom = 1). The ECS merges all chi-square statistics of a gene after correcting the redundancy of the statistics due to LD. The LD is calculated from genotypes of an ancestrally matched sample in VCF format, e.g. a panel of 1000 Genomes Project. The method of ECS is described in our paper (<strong>link</strong>).</p>
+<h3>Required options</h3><ul>
+<li><code>--gene-assoc</code></li>
+<li><code>--sum-file [/path/to/summary/file]</code></li>
+<li><code>--vcf-ref [/path/to/vcf/file]</code></li>
+<li><code>--keep-ref</code></li>
+<li><code>[--saved-ref "previous/output/path/prefix"]</code></li>
+<li><code>--out [output/path/prefix]</code></li>
+</ul>
+<p><strong>See an analysis example at:</strong></p>
+<h3>Explanations and Optional options</h3><ul>
+<li><p><code>--gene-assoc</code>: The main function option.</p>
+</li>
+<li><p><code>--sum-file</code>: The file containing GWAS summary statistics.
+  Three columns of the GWAS summary statistic file, chromosome, physical position and <em>p</em>-value are minimal requirement. The default column names are CHR, BP and P respectively. Otherwise, users should specify the name by <code>--chrom-col</code>, <code>--pos-col</code> and <code>--p-col</code> respectively.</p>
+  <div style="width:300px;margin:auto;">
+
+<table>
+<thead>
+<tr>
+<th align="center">CHR</th>
+<th align="center">BP</th>
+<th align="center">P</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">751756</td>
+<td align="center">0.979957</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">752566</td>
+<td align="center">0.863844</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">752894</td>
+<td align="center">0.55814</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">753405</td>
+<td align="center">0.968401</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">755890</td>
+<td align="center">0.918246</td>
+</tr>
+</tbody></table>
+  </div>
+</li>
+<li><p><code>--vcf-ref</code>: The file containing genotypes to calculate genotypic correlations.</p>
+</li>
+<li><p><code>--keep-ref</code>: Save the encoded genotypes in VCF for future usage, which will speed up next analysis.</p>
+</li>
+<li><p><code>--saved-ref</code>: Instead of using <code>--vcf-ref</code>, one can directly specify the path of encoded genotypes last time by specifying last output path.</p>
+</li>
+<li><p><code>--filter-maf-le</code>: Filter out variants with minor allele frequency less or equal than the specified value.</p>
+</li>
+<li><p><code>--out</code>: Specify the path and prefix name of the output files. The main output file of the gene-based analysis is <strong>*.gene.pvalue.txt</strong> or <strong>*.gene.pvalue.xls</strong>. The following</p>
+  <div style="width:900px;margin:auto;">
+
+<table>
+<thead>
+<tr>
+<th align="center">Gene</th>
+<th align="center">Var</th>
+<th align="center">ECSP</th>
+<th align="center">Chrom</th>
+<th align="center">Pos</th>
+<th align="center">VarP</th>
+<th align="center">Ingored</th>
+<th align="center">RefGene</th>
+<th align="center">GENCODE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RERE-AS1</td>
+<td align="center">21</td>
+<td align="center">7.83E-10</td>
+<td align="center">1</td>
+<td align="center">8490320</td>
+<td align="center">1.17E-10</td>
+<td align="center">0</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">RNU6-2</td>
+<td align="center">11</td>
+<td align="center">0.442684</td>
+<td align="center">1</td>
+<td align="center">10355834</td>
+<td align="center">0.146355</td>
+<td align="center">0</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">PTPRF</td>
+<td align="center">188</td>
+<td align="center">4.59E-11</td>
+<td align="center">1</td>
+<td align="center">44083015</td>
+<td align="center">4.09E-11</td>
+<td align="center">0</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+  </div>
+
+<p>  columns in the output file are gene symbol, number of variants in the gene, <em>p</em>-values of gene-based association test, and the detailed information of the top variant within the gene (i.e., the variant with smallest <em>p</em>-value). These columns include chromosome, physical position, <em>p</em>-value, whether the top variant was ignored in the gene-based association analysis, and gene feature annotations according to RefGene and GENCODE.</p>
+</li>
+</ul>
+<h2 id="7" class="jump">Finely map genes and estimate relevant cell-types of a phenotype by the single-cell (or bulk-cell) type and phenotype cross annotation framework (SPA)</h2><p>One can simultaneously prioritize phenotype associated genes and cell-types with GWAS <em>p</em>-values and gene/transcript expression profile. The GWAS <em>p</em>-values types and expression were analyzed by an iterative prioritization procedure. In the procedure, phenotype-associated genes were prioritized by a conditional gene-based association (using the ECS again) according to the genes’ selective expression in disease related cell-types while the phenotype related cell-types were prioritized by an enrichment analysis of Wilcoxon rank-sum test for phenotype-associated genes’ selective expression. The phenotype-associated gene list and phenotype related cell-type list were updated by turns until the two list were unchanged. The detailed method is described in our paper (<strong>link</strong>).</p>
+<h3>Required options</h3><ul>
+<li><code>--spa</code></li>
+<li><code>--expression-file [path/to/expression/file]</code></li>
+<li><code>--only-hgnc-gene</code></li>
+<li><code>--sum-file [/path/to/summary/file]</code></li>
+<li><code>--saved-ref  [previous/output/path/prefix]</code></li>
+<li><code>--filter-maf-le 0.02</code></li>
+<li><code>--out [output/path/prefix]</code></li>
+</ul>
+<p><strong>See an analysis example at:</strong></p>
+<h3>Explanations and Optional options</h3><ul>
+<li><p><code>--spa</code>: The main function option.</p>
+</li>
+<li><p><code>--multiple-testing</code>: The multiple testing method to select significant genes for the conditional analysis. There are three settings. <em>bonf</em>: Standard Bonferroni correction given a family-wise error rate specified by <code>--p-value-cutoff</code>.  <em>benfdr</em>: Benjamini-Hochberg method to control the false discovery rate. <em>fixed</em>: Filtering by a fixed p-value cutoff.</p>
+</li>
+<li><p><code>--p-value-cutoff</code>: The cutoff for the multiple testing.</p>
+</li>
+<li><p><code>--only-hgnc-gene</code>: Only consider genes with hgnc gene symbols.</p>
+</li>
+<li><p><code>--expression-file</code>: The path of gene expression file.
+  The expression file contains gene symbols (the first column), expression mean and standard errors of the gene or transcript in a cell types or clusters. One can include the Ensembl transcript ID of a gene in the first column. When a gene has multiple transcripts, each row can only contain the data of transcript. The standard error is not pre-requisite.</p>
+  <div style="width:900px;margin:auto;">
+
+<table>
+<thead>
+<tr>
+<th align="center">Gene</th>
+<th align="center">Cell_cluster1</th>
+<th align="center">Cell_cluster1.SE</th>
+<th align="center">Cell_cluster2</th>
+<th align="center">Cell_cluster2.SE</th>
+<th align="center">…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PRPF19:ENST00000541371</td>
+<td align="center">2.5</td>
+<td align="center">0.234</td>
+<td align="center">12.5</td>
+<td align="center">0.564</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">PRPF19:ENST00000541391</td>
+<td align="center">3.2343</td>
+<td align="center">0.4638</td>
+<td align="center">10.23</td>
+<td align="center">0.58</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">C19orf47:ENST00000580977</td>
+<td align="center">9.2343</td>
+<td align="center">0.8638</td>
+<td align="center">1.23</td>
+<td align="center">0.548</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+  </div></li>
+<li><p><code>--sum-file</code>: See above description. </p>
+</li>
+<li><p><code>--filter-maf-le</code>: See above description.</p>
+</li>
+<li><p><code>--out</code>: Specify the path and prefix name of the output files. One of main output files is the conditional gene-based analysis results, named <strong>*.finemapping.gene.ecs.txt</strong> or <strong>*. finemapping.gene.ecs.xls</strong>. The following</p>
+  <div style="width:1000px;margin:auto;">
+
+<table>
+<thead>
+<tr>
+<th align="center">Gene</th>
+<th align="center">Chrom</th>
+<th align="center">StartPos</th>
+<th align="center">EndPos</th>
+<th align="center">Var</th>
+<th align="center">Group</th>
+<th align="center">ECSP</th>
+<th align="center">CondiECSP</th>
+<th align="center">GeneScore</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">C1orf162</td>
+<td align="center">1</td>
+<td align="center">112011621</td>
+<td align="center">112025081</td>
+<td align="center">21</td>
+<td align="center">0</td>
+<td align="center">2.73E-04</td>
+<td align="center">2.73E-04</td>
+<td align="center">3443</td>
+</tr>
+<tr>
+<td align="center">LINC01703</td>
+<td align="center">1</td>
+<td align="center">226266440</td>
+<td align="center">226282822</td>
+<td align="center">33</td>
+<td align="center">0</td>
+<td align="center">2.09E-04</td>
+<td align="center">2.09E-04</td>
+<td align="center">233.1</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+  </div>
+
+<p>  columns in the output file are gene symbol, chromosome, transcription start position, transcription end position, number of variants in the gene, the LD group ID of genes, <em>p</em>-values of gene-based association test, <em>p</em>-values of conditional gene-based association test, and the selective expression score in enriched tissue or cell-types.</p>
+  <br>
+
+<p>  Another main output files is the selective expression enrichment analysis results at different tissues or cell types, named <strong>*.celltype.txt</strong> or <strong>*. celltype.xls</strong>. The following</p>
+  <div style="width:500px;margin:auto;">
+
+<table>
+<thead>
+<tr>
+<th align="center">TissueName</th>
+<th align="center">RobustRegressionZ</th>
+<th align="center">AveragedLog(p)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Kidney-Cortex</td>
+<td align="center">1.70E-03</td>
+<td align="center">2.765004628</td>
+</tr>
+<tr>
+<td align="center">Brain-Cortex</td>
+<td align="center">2.30E-02</td>
+<td align="center">1.639680865</td>
+</tr>
+<tr>
+<td align="center">Bladder</td>
+<td align="center">2.50E-02</td>
+<td align="center">1.597056329</td>
+</tr>
+<tr>
+<td align="center">Brain-Hippocampus</td>
+<td align="center">2.70E-02</td>
+<td align="center">1.561281239</td>
+</tr>
+<tr>
+<td align="center">Colon-Transverse</td>
+<td align="center">3.00E-02</td>
+<td align="center">1.527765274</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+  </div>
+
+<p>  columns in the output file are tissue or cell-type names, the <em>p</em>-value of enrichment according to the selective expression derived from the robust regression <em>z</em>-score, the logarithm of <em>p</em>-value.</p>
+</li>
+</ul>
+<h2 id="8" class="jump">Infer causal genes based on GWAS summary statistics and eQTLs by Mendelian randomization analysis framework for causal gene estimation (MACG)</h2><p>One can perform multiple IVs based MR analysis to infer casual gene or transcript by an integrative framework named MACG. MACG adopted two multiple IVs based MR methods for causality test and casual effect estimation of a gene’s expression to a phenotype, median-based MR and ML-based MR. MACG needs two major inputs, GWAS and eQTL summary statistics respectively. The GWAS summary statistics refer to the logarithm of odds ratio or regression coefficients and the corresponding standard errors (SEs) from a large-scale GWAS study, indicating the association between IVs and a phenotype. The eQTL summary statistics are similar to that of the GWAS, indicating association between IVs and expression of genes or transcripts in a tissue or cell type. MACG has integrated the pre-calculated cis-eQTLs in 55 tissues or cell-types with gene-level and transcript-level expression from GTEx (version 8).</p>
+<h3>Required options</h3><ul>
+<li><code>--macg</code></li>
+<li><code>--eqtl-file [path/to/eQTL/file of genes or transcripts]</code></li>
+<li><code>--sum-file [/path/to/summary/file]</code></li>
+<li><code>--beta-or [y/n]</code></li>
+<li><code>--saved-ref  [previous/output/path]</code></li>
+<li><code>--out [output/path/prefix]</code></li>
+</ul>
+<p><strong>See an analysis example at:</strong></p>
+<h3>Explanations and Optional options</h3><ul>
+<li><p><code>--macg</code>: The main function option.</p>
+</li>
+<li><p><code>--eqtl-file</code>: See above description.</p>
+</li>
+<li><p><code>--sum-file</code>: See above description.</p>
+</li>
+<li><p><code>--beta-or</code>: Indicate whether the coefficients (i.e., betas) in the summary statistics file are conventional odds ratios. If yes, KGGSee will automatically transform the betas and SEs by the natural logarithm. </p>
+</li>
+<li><p><code>--saved-ref</code>: See above description.</p>
+</li>
+<li><p><code>--out</code>: Specify the path and prefix name of the output files. The main output file is the Mendelian randomization analysis results for causal gene estimation, named <strong>*.mr.gene.txt</strong> or <strong>*. gene.mr.gene.xls</strong>. The following</p>
+  <div style="width:1400px;margin:auto;font-size:10px">
+
+<table>
+<thead>
+<tr>
+<th align="center">Gene</th>
+<th align="center">Var</th>
+<th align="center">minP_MedianMR</th>
+<th align="center">DetailsMedianMR</th>
+<th align="center">minP_MLMR</th>
+<th align="center">DetailsMLMR</th>
+<th align="center">Chrom</th>
+<th align="center">Pos</th>
+<th align="center">GWAS_Var_P</th>
+<th align="center">GWAS_Var_Beta</th>
+<th align="center">GWAS_Var_SE</th>
+<th align="center">eQTL_P</th>
+<th align="center">eQTL_Beta</th>
+<th align="center">eQTL_SE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AMPD1</td>
+<td align="center">3</td>
+<td align="center">.</td>
+<td align="center">ENST00000639274[2,NaN,NaN,NaN]</td>
+<td align="center">9.38E-06</td>
+<td align="center">ENST00000639274[2,-0.07947323864224412,0.017935971853054997,9.382262412244995E-6]</td>
+<td align="center">1</td>
+<td align="center">115309590</td>
+<td align="center">8.83E-08</td>
+<td align="center">1.057384</td>
+<td align="center">0.0104</td>
+<td align="center">4.65E-05</td>
+<td align="center">-0.613</td>
+<td align="center">0.151</td>
+</tr>
+<tr>
+<td align="center">RN7SL432P</td>
+<td align="center">3</td>
+<td align="center">.</td>
+<td align="center">ENST00000484057[2,NaN,NaN,NaN]</td>
+<td align="center">9.38E-06</td>
+<td align="center">ENST00000484057[2,-0.07947323864224412,0.017935971853054997,9.382262412244995E-6]</td>
+<td align="center">1</td>
+<td align="center">115309590</td>
+<td align="center">8.83E-08</td>
+<td align="center">1.057384</td>
+<td align="center">0.0104</td>
+<td align="center">4.65E-05</td>
+<td align="center">-0.613</td>
+<td align="center">0.151</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+  </div>
+
+<p>  columns in the output file are gene symbol, number of variants in the gene, <em>p</em>-values of causality tests by Median-based MR, detailed causality estimation by Median-based MR, <em>p</em>-values of causality tests by maximal likelihood-based MR, detailed causality estimation by maximal likelihood-based MR, chromosome, top GWAS variant position, <em>p</em>-value, beta and SE of the top GWAS variant, <em>p</em>-value, beta and SE of the top GWAS variant as an eQTL. When a gene has multiple transcripts, the detailed MR results will show MR analysis of all transcripts. Each MR analysis result has four components, the number IVs for the estimation, the estimated causal effect, the standard error of the estimation, and the <em>p</em>-values. </p>
+</li>
+</ul>
+<h2 id="9" class="jump">eQTL-guided gene/transcript-based association</h2><p>One can perform gene/transcript-based association analysis guided by eQTLs. The statistical method is still the effective chi-square statistics (ECS). ECS only combines the GWAS <em>p</em>-values of eQTLs of a gene or transcript. The pre-calculated cis-eQTLs of gene-level and transcript-level expression in 55 tissues or cell-types from GTEx (version 8) have been integrated into KGGSEE.</p>
+<h3>Required options</h3><ul>
+<li><code>--gene-assoc</code></li>
+<li><code>--eqtl-file [path/to/eQTL/file of genes or transcripts]</code></li>
+<li><code>--eqtl-p-cut 0.01</code></li>
+<li><code>--expression-file [path/to/expression/file]</code></li>
+<li><code>--calcu-selectivity</code></li>
+<li><code>--sum-file [/path/to/summary/file]</code></li>
+<li><code>--filter-maf-le 0.02</code></li>
+<li><code>--saved-ref  [previous/output/path]</code></li>
+<li><code>--out [output/path/prefix]</code></li>
+</ul>
+<p><strong>See an analysis example at:</strong></p>
+<h3>Explanations and Optional options</h3><ul>
+<li><p><code>--gene-finemapping</code>: The main function option.</p>
+</li>
+<li><p><code>--multiple-testing</code>: See above description.</p>
+</li>
+<li><p><code>--p-value-cutoff</code>: See above description.</p>
+</li>
+<li><p><code>--only-hgnc-gene</code>: See above description.</p>
+</li>
+<li><p><code>--gene-score</code>: See above description.</p>
+</li>
+<li><p><code>--calcu-selectivity</code>: See above description.</p>
+</li>
+<li><p><code>--eqtl-file</code>: The path of eQTL file based on the gene-level or transcript-level expression.
+  The eQTL file has a similar fasta format. The first row is just column names and optional. The eQTL data of a gene or transcript start with the symbol “&gt;”. In the same row, the gene symbol, Ensembl transcript ID and chromosome name are included and delimited by tab characters. The subsequent row contains the summary statistics the eQTL for the gene or transcript. The tab-delimited columns are physical position, reference allele, alternative allele, frequency of alternative allele, estimated effect size, standard error of the estimation, <em>p</em>-value, effective sample sizes and determination coefficient in a linear regression respectively. In the regression, the number of alternative alleles is used as an independent variable. On KGGSEE, we have pre-calculated the eQTL data using GTEx data (version 8). Variants within 1MB upstream and downstream of a gene or a transcript are included. </p>
+<pre><code>#symbol id      chr     pos     ref     alt     altfreq beta    se      p       neff    r2
+&gt;DDX11L1    ENST000456328    1                        
+13418    G    A    0.161    -0.03    0.013    0.027    62    0.076
+19391    G    A    0.11    0.065    0.027    0.017    63    0.085
+107970    G    A    0.285    -0.024    0.01    0.018    86    0.063
+&gt;MIR6859    ENST0000612080    1                        
+13418    G    A    0.161    -0.03    0.013    0.027    62    0.076
+19391    G    A    0.11    0.065    0.027    0.017    63    0.085
+62578    G    A    0.081    0.062    0.024    7.98E-03    67    0.098
+99334    A    G    0.088    0.071    0.035    0.043    56    0.07
+…    …    …    …    …    …    …    …    …</code></pre>
+</li>
+<li><p><code>--eqtl-p-cut</code>: Set the <em>p</em>-value cutoff to filter out less significant eQTL for the analysis.</p>
+</li>
+<li><p><code>--sum-file</code>: See above description. </p>
+</li>
+<li><p><code>--filter-maf-le</code>: See above description.</p>
+</li>
+<li><p><code>--out</code>: Specify the path and prefix name of the output files. There are three main result files. One is the gene-based association result file, named <strong>*.gene.txt</strong> or <strong>*.gene.xls</strong>. The following</p>
+<table>
+<thead>
+<tr>
+<th align="center">Gene</th>
+<th align="center">Var</th>
+<th align="center">ECSP</th>
+<th align="center">Chrom</th>
+<th align="center">Pos</th>
+<th align="center">VarP</th>
+<th align="center">eQTL_P</th>
+<th align="center">eQTL_Beta</th>
+<th align="center">eQTL_SE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">MTCO1P12</td>
+<td align="center">419</td>
+<td align="center">0.151394</td>
+<td align="center">1</td>
+<td align="center">1155757</td>
+<td align="center">0.008248</td>
+<td align="center">0.00102</td>
+<td align="center">271.508</td>
+<td align="center">82.652</td>
+</tr>
+<tr>
+<td align="center">WBP1LP7</td>
+<td align="center">9</td>
+<td align="center">0.906045</td>
+<td align="center">1</td>
+<td align="center">956327</td>
+<td align="center">0.3727</td>
+<td align="center">0.00375</td>
+<td align="center">0.145</td>
+<td align="center">0.05</td>
+</tr>
+<tr>
+<td align="center">LINC01770</td>
+<td align="center">58</td>
+<td align="center">0.125738</td>
+<td align="center">1</td>
+<td align="center">1493727</td>
+<td align="center">0.01111</td>
+<td align="center">0.00159</td>
+<td align="center">-0.212</td>
+<td align="center">0.067</td>
+</tr>
+<tr>
+<td align="center">OR4F5</td>
+<td align="center">16</td>
+<td align="center">0.95193</td>
+<td align="center">1</td>
+<td align="center">837192</td>
+<td align="center">0.75</td>
+<td align="center">0.01</td>
+<td align="center">0.082</td>
+<td align="center">0.032</td>
+</tr>
+<tr>
+<td align="center">MIR6726</td>
+<td align="center">63</td>
+<td align="center">0.278839</td>
+<td align="center">1</td>
+<td align="center">1914487</td>
+<td align="center">0.01711</td>
+<td align="center">0.01</td>
+<td align="center">-0.092</td>
+<td align="center">0.036</td>
+</tr>
+</tbody></table>
+<p>  columns in the output file are gene symbol, number of variants in the gene, chromosome, gene start position, gene end position, the position of top variant, the <em>p</em>-value, coefficient and standard error of the variant for gene expression as an eQTL. The second is the conditional gene-based analysis results, named <strong>*.finemapping.gene.ecs.txt</strong> or <strong>*. finemapping.gene.ecs.xls</strong>. The third is the selective expression enrichment analysis results at different tissues or cell types, named <strong>*.selectivity.ecs.txt</strong> or <strong>*.selectivity.ecs.xls</strong>. Their file formats are the same as above.</p>
+</li>
+</ul>
+<h1 id="10" class="jump">Options Index</h1><div style="width:900px;margin:auto;">
+
+<table>
+    <tbody><tr>
+        <th>Option</th>
+        <th>Description</th>
+        <th>Examples with default value</th>  
+    </tr>
+    <tr>
+        <td colspan="3">Inputs/outputs</td>
+    </tr> 
+    <tr>
+        <td>--a1-col</td>
+        <td>column name of alternative or minor allele</td>
+        <td>--a1-col A1</td>
+    </tr>
+    <tr>
+        <td>--a2-col</td>
+        <td>column name of reference or major allele</td>
+        <td>--a2-col A2</td>
+    </tr>
+    <tr>
+        <td>--beta-col</td>
+        <td>column name of coefficients</td>
+        <td>--beta-col OR</td>
+    </tr>
+    <tr>
+        <td>--beta-or</td>
+        <td>whether the coefficients are odds ratio</td>
+        <td>--beta-or y</td>
+    </tr>
+    <tr>
+        <td>--buildver</td>
+        <td>Reference genome version of the coordinates</td>
+        <td>--buildver hg19</td>
+    </tr>
+    <tr>
+        <td>--chrom-col </td>
+        <td>column name of chromosome ID</td>
+        <td>--chrom-col CHR</td>
+    </tr>
+    <tr>
+        <td>--eqtl-file</td>
+        <td>Path of eQTL file</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--excel</td>
+        <td>Output results in Excel format</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--expression-
+        gty-vcf</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--freq-a1-col</td>
+        <td>column name of frequencies of A1 allele</td>
+        <td>--freq-a1-col FRQ_U</td>
+    </tr>
+    <tr>
+        <td>--keep-ref</td>
+        <td>save the encoded genotypes in VCF for future usage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--nmiss-col</td>
+        <td>column name of sample size with non-missing genotypes</td>
+        <td>--nmiss-col Neff</td>
+    </tr>
+    <tr>
+        <td>--out</td>
+        <td>Output path and prefix name</td>
+        <td>--out ./test/test1</td>
+    </tr>
+    <tr>
+        <td>--pos-col</td>
+        <td>column name of positions</td>
+        <td>--pos-col BP</td>
+    </tr>
+    <tr>
+        <td>--p-col</td>
+        <td>column name of p-values</td>
+        <td>--p-col P</td>
+    </tr>
+    <tr>
+        <td>--saved-ref</td>
+        <td>the path of encoded genotypes by last time</td>
+        <td>--saved-ref ./test/test1</td>
+    </tr>
+    <tr>
+        <td>--se-col</td>
+        <td>column name of standard errors of the coefficients</td>
+        <td>--se-col SE</td>
+    </tr>
+    <tr>
+        <td>--sum-file</td>
+        <td>Path of the file storing GWAS summary statistics</td>
+        <td>--sum-ref ./path/to/gwas_summary_file</td>
+    </tr>
+    <tr>
+        <td>--vcf-ref</td>
+        <td>The path of vcf file and name</td>
+        <td>--vcf-ref ./path/to/vcf_file</td>
+    </tr>
+    <tr>
+        <td colspan="3">Quality control</td>
+    </tr>
+    <tr>
+        <td>--filter-eqtl-p</td>
+        <td>Filter eQTLs with p-value &gt; the cutoff </td>
+        <td>--filter-eqtl-p 1E-2</td>
+    </tr>
+    <tr>
+        <td>--filter-maf-le</td>
+        <td>Filer variants with MAF ≤ the cutoff</td>
+        <td>--filter-maf-le 0.02</td>
+    </tr>
+    <tr>
+        <td>--hwe-all</td>
+        <td>Filter variants with HWD test p-value &lt; the cutoff</td>
+        <td>--filter-eqtl-p 1E-5</td>
+    </tr>
+    <tr>
+        <td>--ld-pruning-mr</td>
+        <td>Prune a variant with genotypic correlation to another variant&gt; the cutoff for causal gene estimation by MR</td>
+        <td>--ld-pruning-mr 0.5</td>
+    </tr>
+    <tr>
+        <td>--multiple-testing 
+        [bonf/benfdr/ fixed]</td>
+        <td>The multiple testing method used to select significant genes for the conditional gene-based analysis. There are three settings. bonf: Standard Bonferroni correction given a family-wise error rate specified by --p-value-cutoff.  benfdr: Benjamini-Hochberg method to control the false discovery rate. fixed: Filtering by a fixed p-value cutoff.</td>
+        <td>--multiple-testing bonf</td>
+    </tr>
+    <tr>
+        <td>--p-value-cutoff</td>
+        <td>The family-wise cutoff for the multiple testing.</td>
+        <td>--p-value-cutoff 0.05</td>
+    </tr>
+    <tr>
+        <td>--only-hgnc-gene</td>
+        <td>only consider genes with HGNC gene symbols</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--neargene</td>
+        <td>Set the extension window size of a gene cover more potential regulatory variants.</td>
+        <td>--neargene 5000</td>
+    </tr>
+    <tr>
+        <td>--regions-out</td>
+        <td>Exclude variants in the specified regions</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3">Functions</td>
+    </tr>
+    <tr>
+        <td>--gene-assoc</td>
+        <td>Perform gene-based association analysis</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--macg</td>
+        <td>Perform Mendelian randomization analysis for causal gene estimation</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--spa</td>
+        <td>Perform single cell type and phenotype association analysis</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>--calcu-selectivity</td>
+        <td>Calculate selective expression of gene or transcripts in a tissue or a cell type.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3">Utilities</td>
+    </tr>
+    <tr>
+        <td>--nt</td>
+        <td>CPU cores for the analysis</td>
+        <td>--nt 12</td>
+    </tr>
+    <tr>
+        <td>--buildver</td>
+        <td>Versions of genomic coordinates. The supported versions are hg19 and hg38.</td>
+        <td>--buildver hg19</td>
+    </tr>
+    <tr>
+        <td>--resource</td>
+        <td>The path and folder of kggsee.</td>
+        <td></td>
+    </tr>
+</tbody></table>
+
+</div>
+</div></div><div data-v-09688901="" class="menu"><div data-v-342754b2="" data-v-09688901=""><div data-v-342754b2="" class="title"> Contents </div><div data-v-342754b2="" id="menu"><ul data-v-342754b2="" class="nav-list"><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#0" class=""> Introduction </a><!----></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#1" class=""> Installation </a><ul data-v-342754b2="" class="nav-list"><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#2" class="active"> kggsee.jar </a></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#3" class=""> R packages </a></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#4" class=""> Resource data </a></li></ul></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#5" class=""> Functions and examples </a><ul data-v-342754b2="" class="nav-list"><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#6" class=""> Gene-based association analysis by an effective chi-square statistics  </a></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#7" class=""> Finely map genes and estimate relevant cell-types of a phenotype by the single-cell  type and phenotype cross annotation framework (SPA) </a></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#8" class=""> Infer causal genes based on GWAS summary statistics and eQTLs by Mendelian randomization analysis framework for causal gene estimation  </a></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#9" class=""> eQTL-guided gene/transcript-based association </a></li></ul></li><li data-v-342754b2=""><a data-v-342754b2="" href="http://localhost:8080/#10" class=""> Options Index </a><!----></li></ul></div></div></div></div></div></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="./KGGSEE_files/chunk-vendors.js.下载"></script><script type="text/javascript" src="./KGGSEE_files/app.js.下载"></script>
+
+</body></html>
